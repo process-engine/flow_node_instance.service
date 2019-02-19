@@ -6,8 +6,7 @@ function registerInContainer(container) {
 
   container
     .register('FlowNodeInstanceService', FlowNodeInstanceService)
-    .dependencies('FlowNodeInstanceRepository', 'IamService')
-    .singleton();
+    .dependencies('FlowNodeInstanceRepository', 'IamService');
 }
 
 module.exports.registerInContainer = registerInContainer;
