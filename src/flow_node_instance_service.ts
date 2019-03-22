@@ -124,6 +124,16 @@ export class FlowNodeInstanceService implements IFlowNodeInstanceService {
     return this.flowNodeInstanceRepository.persistOnTerminate(flowNode, flowNodeInstanceId, token);
   }
 
+  public async persistOnInterrupt(
+    flowNode: FlowNode,
+    flowNodeInstanceId: string,
+    token: ProcessToken,
+    interruptorInstanceId: string,
+  ): Promise<FlowNodeInstance> {
+
+    return this.flowNodeInstanceRepository.persistOnInterrupt(flowNode, flowNodeInstanceId, token, interruptorInstanceId);
+  }
+
   public async suspend(flowNodeId: string, flowNodeInstanceId: string, token: ProcessToken): Promise<FlowNodeInstance> {
     return this.flowNodeInstanceRepository.suspend(flowNodeId, flowNodeInstanceId, token);
   }
