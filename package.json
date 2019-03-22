@@ -13,7 +13,7 @@
     "Christian Werner <christian.werner@5minds.de>"
   ],
   "dependencies": {
-    "@process-engine/flow_node_instance.contracts": "^2.0.0"
+    "@process-engine/flow_node_instance.contracts": "feature~interrupted_state_for_flow_nodes"
   },
   "devDependencies": {
     "@essential-projects/eslint-config": "^1.0.0",
