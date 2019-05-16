@@ -12,7 +12,7 @@
     "Christian Werner <christian.werner@5minds.de>"
   ],
   "dependencies": {
-    "@process-engine/flow_node_instance.contracts": "feature~add_getTokenForFlowNodeByProcessInstanceId"
+    "@process-engine/flow_node_instance.contracts": "1.2.0-9537af2d-b6"
   },
   "devDependencies": {
     "@essential-projects/tslint-config": "^1.1.5",
