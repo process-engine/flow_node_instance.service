@@ -16,15 +16,10 @@
     "@process-engine/flow_node_instance.contracts": "1.2.0-9537af2d-b6"
   },
   "devDependencies": {
-    "@essential-projects/tslint-config": "^1.1.5",
+    "@essential-projects/eslint-config": "^1.0.0",
     "@types/node": "^10.12.10",
-    "@types/sequelize": "^4.27.32",
-    "gulp": "^4.0.0",
-    "gulptraum": "^3.0.0",
-    "gulptraum-typescript": "^3.0.0",
-    "moment": "^2.22.2",
+    "eslint": "^5.16.0",
     "tsconfig": "^7.0.0",
-    "tslint": "^5.11.0",
     "typescript": "^3.3.4000"
   },
   "scripts": {
