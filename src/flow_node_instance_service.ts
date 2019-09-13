@@ -23,67 +23,79 @@ export class FlowNodeInstanceService implements IFlowNodeInstanceService {
     return this.flowNodeInstanceRepository.querySpecificFlowNode(correlationId, processModelId, flowNodeId);
   }
 
-  public async queryFlowNodeInstancesByProcessInstanceId(processInstanceId: string, flowNodeId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryFlowNodeInstancesByProcessInstanceId(processInstanceId, flowNodeId);
-  }
-
-  public async queryByFlowNodeId(flowNodeId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByFlowNodeId(flowNodeId);
-  }
-
   public async queryByInstanceId(instanceId: string): Promise<FlowNodeInstance> {
     return this.flowNodeInstanceRepository.queryByInstanceId(instanceId);
   }
 
-  public async queryByCorrelation(correlationId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByCorrelation(correlationId);
+  public async queryFlowNodeInstancesByProcessInstanceId(
+    processInstanceId: string,
+    flowNodeId: string,
+    offset: number = 0,
+    limit: number = 0,
+  ): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryFlowNodeInstancesByProcessInstanceId(processInstanceId, flowNodeId, offset, limit);
   }
 
-  public async queryByProcessModel(processModelId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByProcessModel(processModelId);
+  public async queryByFlowNodeId(flowNodeId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByFlowNodeId(flowNodeId, offset, limit);
   }
 
-  public async queryByCorrelationAndProcessModel(correlationId: string, processModelId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByCorrelationAndProcessModel(correlationId, processModelId);
+  public async queryByCorrelation(correlationId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByCorrelation(correlationId, offset, limit);
   }
 
-  public async queryByProcessInstance(processInstanceId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByProcessInstance(processInstanceId);
+  public async queryByProcessModel(processModelId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByProcessModel(processModelId, offset, limit);
   }
 
-  public async queryByState(state: FlowNodeInstanceState): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryByState(state);
+  public async queryByCorrelationAndProcessModel(
+    correlationId: string,
+    processModelId: string,
+    offset: number = 0,
+    limit: number = 0,
+  ): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByCorrelationAndProcessModel(correlationId, processModelId, offset, limit);
   }
 
-  public async queryActive(): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryActive();
+  public async queryByProcessInstance(processInstanceId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByProcessInstance(processInstanceId, offset, limit);
   }
 
-  public async queryActiveByProcessInstance(processInstanceId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryActiveByProcessInstance(processInstanceId);
+  public async queryByState(state: FlowNodeInstanceState, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryByState(state, offset, limit);
+  }
+
+  public async queryActive(offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryActive(offset, limit);
+  }
+
+  public async queryActiveByProcessInstance(processInstanceId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.queryActiveByProcessInstance(processInstanceId, offset, limit);
   }
 
   public async queryActiveByCorrelationAndProcessModel(
     correlationId: string,
     processModelId: string,
+    offset: number = 0,
+    limit: number = 0,
   ): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.queryActiveByCorrelationAndProcessModel(correlationId, processModelId);
+    return this.flowNodeInstanceRepository.queryActiveByCorrelationAndProcessModel(correlationId, processModelId, offset, limit);
   }
 
-  public async querySuspendedByCorrelation(correlationId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.querySuspendedByCorrelation(correlationId);
+  public async querySuspendedByCorrelation(correlationId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.querySuspendedByCorrelation(correlationId, offset, limit);
   }
 
-  public async querySuspendedByProcessModel(processModelId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.querySuspendedByProcessModel(processModelId);
+  public async querySuspendedByProcessModel(processModelId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.querySuspendedByProcessModel(processModelId, offset, limit);
   }
 
-  public async querySuspendedByProcessInstance(processInstanceId: string): Promise<Array<FlowNodeInstance>> {
-    return this.flowNodeInstanceRepository.querySuspendedByProcessInstance(processInstanceId);
+  public async querySuspendedByProcessInstance(processInstanceId: string, offset: number = 0, limit: number = 0): Promise<Array<FlowNodeInstance>> {
+    return this.flowNodeInstanceRepository.querySuspendedByProcessInstance(processInstanceId, offset, limit);
   }
 
-  public async queryProcessTokensByProcessInstanceId(processInstanceId: string): Promise<Array<ProcessToken>> {
-    return this.flowNodeInstanceRepository.queryProcessTokensByProcessInstanceId(processInstanceId);
+  public async queryProcessTokensByProcessInstanceId(processInstanceId: string, offset: number = 0, limit: number = 0): Promise<Array<ProcessToken>> {
+    return this.flowNodeInstanceRepository.queryProcessTokensByProcessInstanceId(processInstanceId, offset, limit);
   }
 
   public async persistOnEnter(
