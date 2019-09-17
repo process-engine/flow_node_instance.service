@@ -1,11 +1,11 @@
 import {
   FlowNode,
   FlowNodeInstance,
+  FlowNodeInstanceList,
   FlowNodeInstanceState,
   IFlowNodeInstanceRepository,
   IFlowNodeInstanceService,
   ProcessToken,
-  FlowNodeInstanceList,
 } from '@process-engine/flow_node_instance.contracts';
 
 import {IIAMService} from '@essential-projects/iam_contracts';
