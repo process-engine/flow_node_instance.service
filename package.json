@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/flow_node_instance.service",
-  "version": "1.2.0",
+  "version": "1.2.0-beta.1",
   "description": "Contains the service layer for the FlowNodeInstance API.",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
