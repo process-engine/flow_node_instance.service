@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/process-engine/flow_node_instance.service#readme",
   "dependencies": {
-    "@process-engine/flow_node_instance.contracts": "2.1.0-beta.1"
+    "@process-engine/flow_node_instance.contracts": "^2.1.0"
   },
   "devDependencies": {
     "@essential-projects/eslint-config": "^1.0.0",
